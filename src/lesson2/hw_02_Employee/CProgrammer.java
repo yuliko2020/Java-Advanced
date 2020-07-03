@@ -1,4 +1,4 @@
-package hw_02_Employee;
+package lesson2.hw_02_Employee;
 
 /**
  * TelRanJavaBasicModulOne

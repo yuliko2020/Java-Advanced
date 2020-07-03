@@ -1,4 +1,4 @@
-package lesson2Module2;
+package lesson2;
 
 /**
  * TelRanJavaBasicModulOne
