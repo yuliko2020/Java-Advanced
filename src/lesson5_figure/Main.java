@@ -13,5 +13,6 @@ public class Main {
         Square square = new Square(7, 7);
         System.out.println(square.getName() +" "+ square.getSquare());
 
+
     }
 }
