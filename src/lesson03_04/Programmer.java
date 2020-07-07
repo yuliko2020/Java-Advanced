@@ -1,7 +1,7 @@
-package lesson03;
+package lesson03_04;
 
 
-public class Programmer extends Employee {
+public class Programmer extends Employee { // extends - наследование
     public Programmer(String name, double salary) {
         super(name, salary);
     }

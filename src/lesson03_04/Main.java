@@ -1,14 +1,38 @@
-package lesson03;
+package lesson03_04;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        EmployeeArray.PayAll(DBMock.getEmployees());
+        EmployeeArray dep01 = new EmployeeArray(DBMock.getEmployees());
+        EmployeeArray dep02 = new EmployeeArray(
+                new Employee[]{
+                        new CProgrammer("Oleg", 3000),
+                        new Manager("Sasha", 2000, 100)
+                }
+        );
+        System.out.println("-----------Department 01");
+        dep01.PrintAll();
+        System.out.println("------------department 02");
+        dep02.PrintAll();
+        EmployeeArray[] firm = {dep01, dep02};
+        for (EmployeeArray arr : firm) {
+            arr.WorkAll();
+        }
+
+
+        /*EmployeeArray employees = new EmployeeArray(DBMock.getEmployees());
+        employees.PrintAll();
+        employees.PayAll();
+        employees.WorkAll();
+        employees.CodeReviewAll();*/
+
+
+        /*EmployeeArray.PayAll(DBMock.getEmployees());
         EmployeeArray.WorkAll(DBMock.getEmployees());
         EmployeeArray.PrintAll(DBMock.getEmployees());
         EmployeeArray.CodeReviewAll(DBMock.getProgrammers());
-
+*/
 
         /*//Object -> Employee -> Programmer
         Employee[] employees = DBMock.getEmployees();

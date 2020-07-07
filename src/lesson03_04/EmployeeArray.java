@@ -1,4 +1,4 @@
-package lesson03;
+package lesson03_04;
 
 
 import java.util.Objects;
@@ -10,21 +10,21 @@ public class EmployeeArray {
         this.employees = employees;
     }
 
-    public static void PayAll(Employee[] employees) {
+    public  void PayAll() {
         for (Employee employee : employees) {
             employee.pay();
         }
         System.out.println("-------------------------------------");
     }
 
-    public static void WorkAll(Employee[] employees) {
+    public  void WorkAll() {
         for (Employee employee : employees) {
             employee.work();
         }
         System.out.println("---------------------------------------");
     }
 
-    public static void PrintAll(Employee[] employees) {
+    public  void PrintAll() {
         for (Employee employee : employees) {
             System.out.println(employee.toString());
         }
@@ -32,7 +32,7 @@ public class EmployeeArray {
 
     }
 
-    public static void CodeReviewAll(Employee[] employees) {
+    public  void CodeReviewAll() {
         for (Programmer programmer : Objects.requireNonNull(DBMock.getProgrammers())) {
             programmer.codeReview();
             System.out.println("Name " + programmer.getName());

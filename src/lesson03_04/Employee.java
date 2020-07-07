@@ -1,7 +1,7 @@
-package lesson03;
+package lesson03_04;
 
 
-public class Employee {
+public  class Employee {
     private String name;
     private double salary;
 
@@ -30,7 +30,6 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
-
 
     public void work() {
     }
