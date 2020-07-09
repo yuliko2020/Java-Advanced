@@ -51,9 +51,9 @@ public class Main {
 
     //приветствие
     private static void sayHi(User[] users, String login, String password) {
-        for (int i = 0; i < users.length; i++) {
-            if (users[i].getLogin().equals(login) && users[i].getPassword().equals(password)) {
-                System.out.println("User : " + users[i].getName() + " you are welcome ");
+        for (User user : users) {
+            if (user.getLogin().equals(login) && user.getPassword().equals(password)) {
+                System.out.println("User : " + user.getName() + " you are welcome ");
             }
         }
     }
