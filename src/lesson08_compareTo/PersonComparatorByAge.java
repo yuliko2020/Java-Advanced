@@ -1,4 +1,4 @@
-package lesson08_;
+package lesson08_compareTo;
 
 /**
  * JavaAdvanced

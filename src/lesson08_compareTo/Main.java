@@ -1,4 +1,4 @@
-package lesson08_;
+package lesson08_compareTo;
 
 /**
  * JavaAdvanced
@@ -13,5 +13,5 @@ public class Main {
 
         System.out.println( PersonComparatorByAge.compare(p2,p1));
     }
-    
+
 }
