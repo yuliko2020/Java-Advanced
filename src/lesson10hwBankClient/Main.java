@@ -20,7 +20,6 @@ public class Main {
         printAccountArray(accaunts);
 
 
-
     }
 
     private static Account[] accountType(String[] client, int getAccountType) {
@@ -31,13 +30,13 @@ public class Main {
             for (int i = 0; i < client.length; i++) {
                 String[] result = client[i].split(" ");
                 switch (getAccountType(result[0])) {
-                case 1:
-                    accounts[i] = new Entity(result[0], result[1]);
-                    break;
-                case 2:
-                    accounts[i] = new Individual(result[0], result[1]);
-                    break;
-            }
+                    case 1:
+                        accounts[i] = new Entity(result[0], result[1]);
+                        break;
+                    case 2:
+                        accounts[i] = new Individual(result[0], result[1]);
+                        break;
+                }
             }
         }
 
