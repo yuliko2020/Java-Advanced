@@ -1,4 +1,4 @@
-package lesson11;
+package lesson11Word;
 
 import java.util.Arrays;
 
