@@ -15,9 +15,18 @@ public class Date {
         this.year = year;
     }
 
-   /* public int getDays() {
-        return 5;
-    }*/
+    public int getDay() {
+        return day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
 
     @Override
     public String toString() {
