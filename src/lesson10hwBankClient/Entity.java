@@ -13,6 +13,8 @@ public class Entity extends Account {
     }
 
 
+
+
     public String getCompanyName() {
         return companyName;
     }

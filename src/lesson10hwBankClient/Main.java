@@ -1,11 +1,12 @@
 package lesson10hwBankClient;
 
+import java.util.Arrays;
+
 /**
  * JavaAdvanced
  * 30/07/2020
  */
 public class Main {
-    private static int getAccountType;
 
     public static void main(String[] args) {
         String[] client = {
@@ -15,23 +16,25 @@ public class Main {
                 "e.V.:PupkinSoftLab Iban:DE15954356"
         };
 
-        Account[] accaunts = accountType(client, getAccountType);
-        System.out.println(client);
+        Account[] accaunts = accountType(client);
+        System.out.println(Arrays.toString(client));
         printAccountArray(accaunts);
 
 
     }
 
-    private static Account[] accountType(String[] client, int getAccountType) {
+
+
+    private static Account[] accountType(String[] client) {
         Account[] accounts = null;
         if (client != null) {
             accounts = new Account[client.length];
 
             for (int i = 0; i < client.length; i++) {
                 String[] result = client[i].split(" ");
-                switch (getAccountType(result[0])) {
+                switch (result.length) {
                     case 1:
-                        accounts[i] = new Entity(result[0], result[1]);
+                        accounts[i] = new Entity(result[0],result[1]);
                         break;
                     case 2:
                         accounts[i] = new Individual(result[0], result[1]);
