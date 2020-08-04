@@ -8,7 +8,7 @@ public class DateInterval {
     private Date start;
     private Date finish;
     //private static Random rnd=new Random(System.currentTimeMillis());
-
+    int days = 0;
 
     public DateInterval(Date start, Date finish) {
         this.start = start;
@@ -24,6 +24,26 @@ public class DateInterval {
     }
 
     public int getDays() {
+        /*int min =1;
+        int max = 100;
+        if (days==0){
+            days = min+rnd.nextInt(max-min+1);
+        }*/
+
+        if (days == 0) {
+            for (int i = start.getYear(); i < finish.getYear(); i++) {
+                days += Date.getDaysPerYear(i);
+            }
+            days-=start.daysFromNewYear();
+            days+=finish.daysFromNewYear();
+        }
+
+        return days;
+    }
+
+
+
+    /*public int getDays() {
         int days ;
         if (start.getYear() == finish.getYear()) {
             days = findDaysNumber(getStart().getYear(), start.getMonth(), start.getDay());
@@ -71,19 +91,11 @@ public class DateInterval {
             return 366;
         } else
             return 365;
-    }
-
-    /*public int getDays(){
-        int min =1;
-        int max = 100;
-        if (days==0){
-            days = min+rnd.nextInt(max-min+1);
-        }
-        return days ;
     }*/
 
-        @Override
-        public String toString () {
-            return "[" + start + ';' + finish + ']';
-        }
+
+    @Override
+    public String toString() {
+        return "[" + start + ';' + finish + ']';
     }
+}
