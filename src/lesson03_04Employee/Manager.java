@@ -1,4 +1,4 @@
-package lesson03_04;
+package lesson03_04Employee;
 
 
 public class Manager extends Employee {
@@ -8,6 +8,7 @@ public class Manager extends Employee {
         super(name, salary);
         this.managerBonus = managerBonus;
     }
+
 
     @Override
     public void pay() {

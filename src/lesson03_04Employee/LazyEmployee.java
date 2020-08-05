@@ -1,4 +1,4 @@
-package lesson03_04;
+package lesson03_04Employee;
 
 
 public class LazyEmployee extends Employee {

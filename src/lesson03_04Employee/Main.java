@@ -1,9 +1,10 @@
-package lesson03_04;
+package lesson03_04Employee;
 
 
 public class Main {
 
     public static void main(String[] args) {
+
         EmployeeArray dep01 = new EmployeeArray(DBMock.getEmployees());
         EmployeeArray dep02 = new EmployeeArray(
                 new Employee[]{
