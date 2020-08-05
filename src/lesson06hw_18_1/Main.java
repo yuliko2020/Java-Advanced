@@ -1,4 +1,4 @@
-package lesson_6hw_18_1;
+package lesson06hw_18_1;
 
 
 /**
