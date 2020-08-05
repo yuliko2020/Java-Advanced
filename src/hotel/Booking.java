@@ -36,7 +36,7 @@ public class Booking {
     public String toString() {
         return "Booking: " + room +
                 " person=" + person +
-                " " + dateInterval+" \n\tprice for "+this.dateInterval.getDays()+" days is "+getPrice()+"Euro";
+                " " + dateInterval+" \n\tprice for "+this.dateInterval.getDays()+" days is "+getPrice()+" Euro";
     }
 
 }
