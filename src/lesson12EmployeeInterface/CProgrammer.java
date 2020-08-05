@@ -1,4 +1,4 @@
-package lesson03_04Employee;
+package lesson12EmployeeInterface;
 
 public class CProgrammer extends Programmer {
     public CProgrammer(String name, double salary) {

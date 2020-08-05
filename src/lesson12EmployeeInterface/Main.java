@@ -1,4 +1,4 @@
-package lesson03_04Employee;
+package lesson12EmployeeInterface;
 
 
 public class Main {
@@ -8,10 +8,10 @@ public class Main {
         Manager m2 = new Manager("m2", 1001.0, 101);
         ProgrammerManager pm1 = new ProgrammerManager("3", 1001.0);
 
-        ManagerAble [] emp ={m1,m2,pm1};
+        ManagerAble[] emp ={m1,m2,pm1};
         emp[0].manage();
 
-        ManagerAble qwe ;
+        ManagerAble qwe =new Manager("3",1001.0,101);
 
 
 

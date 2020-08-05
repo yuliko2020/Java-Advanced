@@ -1,7 +1,7 @@
-package lesson03_04Employee;
+package lesson12EmployeeInterface;
 
 
-public class Programmer extends Employee { // extends - наследование
+public abstract class  Programmer extends Employee { // extends - наследование
     public Programmer(String name, double salary) {
         super(name, salary);
     }
@@ -12,7 +12,5 @@ public class Programmer extends Employee { // extends - наследование
     }
 
 
-    public void codeReview() {
-
-    }
+    abstract public void codeReview();
 }

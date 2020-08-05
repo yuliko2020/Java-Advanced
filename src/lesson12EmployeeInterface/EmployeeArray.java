@@ -1,4 +1,4 @@
-package lesson03_04Employee;
+package lesson12EmployeeInterface;
 
 
 import java.util.Objects;

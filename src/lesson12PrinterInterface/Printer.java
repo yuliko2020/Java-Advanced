@@ -1,4 +1,4 @@
-package lesson12Interface;
+package lesson12PrinterInterface;
 
 /**
  * JavaAdvanced
