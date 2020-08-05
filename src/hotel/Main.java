@@ -38,19 +38,13 @@ public class Main {
 
         );
 
-        BookingList bookingList = new ArrayBookingList(2) ;
-        bookingList.add(b1);
-        bookingList.add(b2);
-        bookingList.add(b3);
-        bookingList.add(b4);
-        bookingList.add(b1);
-        bookingList.add(b2);
-        bookingList.add(b3);
-        bookingList.add(b4);
-        bookingList.print();
-
-
-
-
+        BookingList bookingList = new ArrayBookingList(2);
+        //        bookingList.add(b1);
+        //        bookingList.add(b2);
+        //        bookingList.add(b3);
+        //        bookingList.add(b4);
+        //        bookingList.print();
+        bookingList.getBookingByIndex(1);
+        bookingList.findBooking(b1);
     }
 }
