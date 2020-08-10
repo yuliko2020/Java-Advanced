@@ -42,17 +42,24 @@ public class ArrayBookingList implements BookingList {
 
     }
 
+    //___???
     @Override
     public Booking getBookingByIndex(int index) {
+        Booking booking = bookings[index];
+        return booking;
 
-        return null;
     }
+    //___???
 
-    @Override
     public Booking findBooking(Booking booking) {
+        for (int i = 0; i < bookings.length; i++) {
+            if (bookings[i].equals(booking)) {
+                System.out.println("Booking : ");
+                return bookings[i];
+            }
+        }
 
-
-
+        System.out.println("Booking not found");
         return null;
     }
 

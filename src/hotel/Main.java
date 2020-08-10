@@ -1,5 +1,8 @@
 package hotel;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * JavaAdvanced
  * 31/07/2020
@@ -43,10 +46,26 @@ public class Main {
         //        bookingList.add(b2);
         //        bookingList.add(b3);
         //        bookingList.add(b4);
-        //        bookingList.print();
+        //      bookingList.print();
 
-        bookingList.getBookingByIndex(2);
-        bookingList.findBooking(b1);
+        Booking [] bookings = new Booking []{ b1,b2,b3,b4 };
+        Comparator <Booking > typeOfSorting;
+
+        int key =4;
+        switch (key){
+            case 1:
+                System.out.println("Sorting by date ");
+                typeOfSorting = new BookingComparatorByDate();
+                Arrays.sort(bookings,typeOfSorting);
+            case 2:
+                System.out.println("Sorting by name ");
+                typeOfSorting = new BookingComparatorByName();
+                Arrays.sort(bookings,typeOfSorting);
+
+        }
+
 
     }
+
+
 }

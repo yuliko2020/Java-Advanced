@@ -28,15 +28,17 @@ public class Booking {
         return dateInterval;
     }
 
-    public double getPrice(){
-        return this.room.getPrice()*this.dateInterval.getDays();
+    public double getPrice() {
+        return this.room.getPrice() * this.dateInterval.getDays();
     }
+
+
 
     @Override
     public String toString() {
         return "Booking: " + room +
                 " person=" + person +
-                " " + dateInterval+" \n\tprice for "+this.dateInterval.getDays()+" days is "+getPrice()+" Euro";
+                " " + dateInterval + " \n\tprice for " + this.dateInterval.getDays() + " days is " + getPrice() + " Euro";
     }
 
 }

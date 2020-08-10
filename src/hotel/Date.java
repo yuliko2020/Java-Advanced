@@ -4,7 +4,7 @@ package hotel;
  * JavaAdvanced
  * 31/07/2020
  */
-public class Date {
+public class Date implements Comparable<Date> {
     public int compareTo;
     private int day;
     private int month;
@@ -74,7 +74,7 @@ public class Date {
     }
 
     public int daysToNewYear() {
-        return getDaysPerYear()-this.daysFromNewYear();
+        return getDaysPerYear() - this.daysFromNewYear();
     }
 
     public static int getDaysPerYear(int year) {
@@ -86,4 +86,14 @@ public class Date {
     }
 
 
+    @Override
+    public int compareTo(Date date) {
+        int checkYears = this.year - date.year;
+        int checkMonth = this.month - date.month;
+        int checkDays = this.day - date.day;
+
+        if (checkYears == 0 && checkMonth == 0 && checkDays == 0) return 0;
+        if (checkYears > 0 && checkMonth > 0) return 1;
+        return -1;
+    }
 }

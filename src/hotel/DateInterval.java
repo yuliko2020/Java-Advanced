@@ -4,7 +4,7 @@ package hotel;
  * JavaAdvanced
  * 31/07/2020
  */
-public class DateInterval implements Comparable < DateInterval> {
+public class DateInterval {
     private Date start;
     private Date finish;
     //private static Random rnd=new Random(System.currentTimeMillis());
@@ -13,6 +13,7 @@ public class DateInterval implements Comparable < DateInterval> {
     public DateInterval(Date start, Date finish) {
         this.start = start;
         this.finish = finish;
+
     }
 
     public Date getStart() {
@@ -23,7 +24,13 @@ public class DateInterval implements Comparable < DateInterval> {
         return finish;
     }
 
-
+    public boolean checkDatesIntervals(DateInterval dateOne, DateInterval dateTwo) {
+        if (dateOne.getStart().equals(dateTwo.start) && dateTwo.getFinish().equals(dateTwo.finish)) {
+            System.out.println("Booking dates are intersect");
+        } else
+            System.out.println("Booking dates are intersect");
+        return false;
+    }
 
 
     public int getDays() {
@@ -50,12 +57,7 @@ public class DateInterval implements Comparable < DateInterval> {
         return "[" + start + ';' + finish + ']';
     }
 
-    @Override
-    public int compareTo(DateInterval dateInterval) {
 
-
-        return 0 ;
-    }
 
 
 

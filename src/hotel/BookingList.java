@@ -2,15 +2,12 @@ package hotel;
 
 /**
  * JavaAdvanced
- * 04/08/2020
+ * 10/08/2020
  */
 public interface BookingList {
-    void add(Booking booking);
+    void add (Booking booking);
     int size();
-    void print();
+    void print ();
     Booking getBookingByIndex(int index);
-   Booking findBooking(Booking booking);
-
-
-
+    Booking findBooking(Booking booking);
 }
