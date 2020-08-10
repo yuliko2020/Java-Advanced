@@ -50,7 +50,8 @@ public class Main {
 
         //Booking [] bookings = new Booking []{ b1,b2,b3,b4 };
 
-        b1.getDateInterval().checkDatesIntervals(b1.getDateInterval(),b2.getDateInterval());
+        b1.getDateInterval().checkDatesIntervals(b1.getDateInterval(), b2.getDateInterval());
+        b3.getDateInterval().checkDatesIntervals(b3.getDateInterval(), b4.getDateInterval());
 
         /*Comparator <Booking > typeOfSorting;
         int key =4;
