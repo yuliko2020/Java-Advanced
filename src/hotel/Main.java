@@ -48,9 +48,11 @@ public class Main {
         //        bookingList.add(b4);
         //      bookingList.print();
 
-        Booking [] bookings = new Booking []{ b1,b2,b3,b4 };
-        Comparator <Booking > typeOfSorting;
+        //Booking [] bookings = new Booking []{ b1,b2,b3,b4 };
 
+        b1.getDateInterval().checkDatesIntervals(b1.getDateInterval(),b2.getDateInterval());
+
+        /*Comparator <Booking > typeOfSorting;
         int key =4;
         switch (key){
             case 1:
@@ -63,7 +65,7 @@ public class Main {
                 Arrays.sort(bookings,typeOfSorting);
 
         }
-
+*/
 
     }
 
