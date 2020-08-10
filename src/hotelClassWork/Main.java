@@ -1,7 +1,6 @@
-package hotel;
+package hotelClassWork;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import hotel.ArrayBookingList;
 
 /**
  * JavaAdvanced
