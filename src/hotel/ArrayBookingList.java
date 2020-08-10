@@ -44,22 +44,17 @@ public class ArrayBookingList implements BookingList {
 
     @Override
     public Booking getBookingByIndex(int index) {
-        /*if (index == size && index == bookings.length) {
-            return bookings[index];
-        }
-        System.out.println("ääääääääää" + index);*/
+
         return null;
     }
 
     @Override
     public Booking findBooking(Booking booking) {
-        for (int i = 0; i < bookings.length ; i++) {
-            if (bookings[i].equals(booking)){
-                return bookings[i];
 
-            }
-            System.out.println(" your booking is ");
-        }
-        return booking;
+
+
+        return null;
     }
+
+
 }

@@ -4,7 +4,7 @@ package hotel;
  * JavaAdvanced
  * 31/07/2020
  */
-public class DateInterval {
+public class DateInterval implements Comparable < DateInterval> {
     private Date start;
     private Date finish;
     //private static Random rnd=new Random(System.currentTimeMillis());
@@ -23,6 +23,9 @@ public class DateInterval {
         return finish;
     }
 
+
+
+
     public int getDays() {
         /*int min =1;
         int max = 100;
@@ -34,11 +37,24 @@ public class DateInterval {
             for (int i = start.getYear(); i < finish.getYear(); i++) {
                 days += Date.getDaysPerYear(i);
             }
-            days-=start.daysFromNewYear();
-            days+=finish.daysFromNewYear();
+            days -= start.daysFromNewYear();
+            days += finish.daysFromNewYear();
         }
 
         return days;
+    }
+
+
+    @Override
+    public String toString() {
+        return "[" + start + ';' + finish + ']';
+    }
+
+    @Override
+    public int compareTo(DateInterval dateInterval) {
+
+
+        return 0 ;
     }
 
 
@@ -94,8 +110,4 @@ public class DateInterval {
     }*/
 
 
-    @Override
-    public String toString() {
-        return "[" + start + ';' + finish + ']';
-    }
 }

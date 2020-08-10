@@ -1,5 +1,4 @@
-package lesson13interface;
-
+package lesson13_14interfaceComparator;
 /**
  * JavaAdvanced
  * 05/08/2020
@@ -13,9 +12,15 @@ public class Person implements Comparable<Person> {
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public int getAge() {
+        return age;
+    }
 
-    /*@Override // by name
+/*@Override // by name
     public int compareTo (Person person){
         return this.name.compareTo(person.name);
     }*/
@@ -37,6 +42,7 @@ public class Person implements Comparable<Person> {
         return 0;
     }*/
 
+    // by name and age
     @Override
     public int compareTo(Person person) {
         int nameComparing = this.name.compareTo(person.name);

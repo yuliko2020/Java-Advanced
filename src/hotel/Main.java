@@ -44,7 +44,9 @@ public class Main {
         //        bookingList.add(b3);
         //        bookingList.add(b4);
         //        bookingList.print();
-        bookingList.getBookingByIndex(1);
+
+        bookingList.getBookingByIndex(2);
         bookingList.findBooking(b1);
+
     }
 }

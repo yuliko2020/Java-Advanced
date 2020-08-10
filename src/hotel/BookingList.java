@@ -9,7 +9,7 @@ public interface BookingList {
     int size();
     void print();
     Booking getBookingByIndex(int index);
-    Booking findBooking(Booking booking);
+   Booking findBooking(Booking booking);
 
 
 

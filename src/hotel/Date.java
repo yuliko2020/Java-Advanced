@@ -5,6 +5,7 @@ package hotel;
  * 31/07/2020
  */
 public class Date {
+    public int compareTo;
     private int day;
     private int month;
     private int year;
@@ -83,4 +84,6 @@ public class Date {
     public int getDaysPerYear() {
         return getDaysPerYear(this.year);
     }
+
+
 }
