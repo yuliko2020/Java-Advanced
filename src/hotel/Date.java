@@ -92,8 +92,19 @@ public class Date implements Comparable<Date> {
         int checkMonth = this.month - date.month;
         int checkDays = this.day - date.day;
 
-        if (checkYears == 0 && checkMonth == 0 && checkDays == 0) return 0;
+        if (checkYears!=0){
+            return checkYears;
+        }else {                    // this.year - date.year;
+            if (checkMonth !=0){
+                return checkMonth;
+            } else {               // this.month - date.month;
+                return checkDays;
+            }
+        }
+
+
+        /*if (checkYears == 0 && checkMonth == 0 && checkDays == 0) return 0;
         if (checkYears > 0 && checkMonth > 0) return 1;
-        return -1;
+        return -1;*/
     }
 }

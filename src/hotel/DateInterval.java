@@ -11,8 +11,21 @@ public class DateInterval {
     int days = 0;
 
     public DateInterval(Date start, Date finish) {
-        this.start = start;
-        this.finish = finish;
+        if (start.compareTo(finish) > 0) {
+            this.start = finish;
+            this.finish = start;
+        } else {
+            this.start = start;
+            this.finish = finish;
+        }
+
+
+    }
+
+    public static boolean isIntersect(DateInterval interval1, DateInterval interval2) {
+        return !((interval1.getStart().compareTo(interval2.getFinish()) > 0) ||
+                (interval1.getStart().compareTo(interval1.getFinish()) > 0));
+
 
     }
 
