@@ -1,5 +1,8 @@
 package hotel;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * JavaAdvanced
  * 04/08/2020
@@ -42,6 +45,19 @@ public class ArrayBookingList implements BookingList {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     //___???
     @Override
     public Booking getBookingByIndex(int index) {
@@ -61,6 +77,13 @@ public class ArrayBookingList implements BookingList {
 
         System.out.println("Booking not found");
         return null;
+    }
+
+    @Override
+    public Booking[] getSortedArray(Comparator<Booking> comparator) {
+        Booking [] res = Arrays.copyOf(bookings,bookings.length);
+        Arrays.sort(res,comparator);
+        return res;
     }
 
 

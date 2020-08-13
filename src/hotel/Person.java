@@ -4,7 +4,7 @@ package hotel;
  * JavaAdvanced
  * 31/07/2020
  */
-public class Person {
+public class Person  {
     private String name;
 
     public Person(String name) {

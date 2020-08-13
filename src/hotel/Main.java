@@ -1,7 +1,6 @@
 package hotel;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * JavaAdvanced
@@ -9,64 +8,53 @@ import java.util.Comparator;
  */
 public class Main {
     public static void main(String[] args) {
+
+
         Booking b1 = new Booking(
                 new StandardRoom("1", 2),
                 new Person("Jack"),
-                new DateInterval(new Date(30, 7, 2020),
-                        new Date(10, 8, 2020))
+                new DateInterval(new MyDate(30, 7, 2020),
+                        new MyDate(10, 8, 2020))
 
         );
 
         Booking b2 = new Booking(
                 new SuiteRoom("2", 2),
                 new Person("Jack2"),
-                new DateInterval(new Date(11, 8, 2020),
-                        new Date(13, 8, 2020))
+                new DateInterval(new MyDate(11, 8, 2020),
+                        new MyDate(13, 8, 2020))
 
         );
 
         Booking b3 = new Booking(
                 new SuiteRoom("3", 2),
                 new Person("Nick1"),
-                new DateInterval(new Date(11, 8, 2020),
-                        new Date(13, 8, 2020))
+                new DateInterval(new MyDate(11, 8, 2020),
+                        new MyDate(13, 8, 2020))
 
         );
 
         Booking b4 = new Booking(
                 new SuiteRoom("4", 2),
                 new Person("Nick2"),
-                new DateInterval(new Date(11, 8, 2020),
-                        new Date(13, 8, 2020))
+                new DateInterval(new MyDate(11, 8, 2020),
+                        new MyDate(13, 8, 2020))
 
         );
 
         BookingList bookingList = new ArrayBookingList(2);
+        bookingList.add(b4);
+        bookingList.add(b2);
+        bookingList.add(b3);
         bookingList.add(b1);
-        //        bookingList.add(b2);
-        //        bookingList.add(b3);
-        //        bookingList.add(b4);
+        bookingList.print();
+        System.out.println("--------------------");
+        Booking[] bookings = bookingList.getSortedArray(new BookingComparatorByName());
         bookingList.print();
 
-        //Booking [] bookings = new Booking []{ b1,b2,b3,b4 };
+        System.out.println();
+        System.out.println(Arrays.toString(bookings));
 
-        b1.getDateInterval().checkDatesIntervals(b1.getDateInterval(), b2.getDateInterval());
-        b3.getDateInterval().checkDatesIntervals(b3.getDateInterval(), b4.getDateInterval());
-
-        /*Comparator <Booking > typeOfSorting;
-        int key =4;
-        switch (key){
-            case 1:
-                System.out.println("Sorting by date ");
-                typeOfSorting = new BookingComparatorByDate();
-                Arrays.sort(bookings,typeOfSorting);
-            case 2:
-                System.out.println("Sorting by name ");
-                typeOfSorting = new BookingComparatorByName();
-                Arrays.sort(bookings,typeOfSorting);
-
-        }
-*/
 
     }
 

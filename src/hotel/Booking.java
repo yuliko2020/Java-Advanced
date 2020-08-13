@@ -5,7 +5,8 @@ package hotel;
  * 31/07/2020
  */
 public class Booking {
-    //private int id;
+    static private int nextId = 0;
+    private int id;
     private Room room;
     private Person person;
     private DateInterval dateInterval;
@@ -14,6 +15,8 @@ public class Booking {
         this.room = room;
         this.person = person;
         this.dateInterval = dateInterval;
+        this.id = ++nextId;
+
     }
 
     public Room getRoom() {
@@ -33,10 +36,9 @@ public class Booking {
     }
 
 
-
     @Override
     public String toString() {
-        return "Booking: " + room +
+        return "(" + id + ")" + "Booking: " + room +
                 " person=" + person +
                 " " + dateInterval + " \n\tprice for " + this.dateInterval.getDays() + " days is " + getPrice() + " Euro";
     }
