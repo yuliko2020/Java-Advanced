@@ -49,11 +49,13 @@ public class Main {
         bookingList.add(b1);
         bookingList.print();
         System.out.println("--------------------");
+
+
         Booking[] bookings = bookingList.getSortedArray(new BookingComparatorByName());
         bookingList.print();
-
         System.out.println();
         System.out.println(Arrays.toString(bookings));
+
 
 
     }
