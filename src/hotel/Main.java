@@ -56,7 +56,8 @@ public class Main {
         System.out.println();
         System.out.println(Arrays.toString(bookings));
 
-
+        bookingList.removeBookingByIndex(b2);
+        bookingList.print();
 
     }
 

@@ -35,6 +35,27 @@ public class Booking {
         return this.room.getPrice() * this.dateInterval.getDays();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Booking booking = (Booking) o;
+
+        if (id != booking.id) return false;
+        if (room != null ? !room.equals(booking.room) : booking.room != null) return false;
+        if (person != null ? !person.equals(booking.person) : booking.person != null) return false;
+        return dateInterval != null ? dateInterval.equals(booking.dateInterval) : booking.dateInterval == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (room != null ? room.hashCode() : 0);
+        result = 31 * result + (person != null ? person.hashCode() : 0);
+        result = 31 * result + (dateInterval != null ? dateInterval.hashCode() : 0);
+        return result;
+    }
 
     @Override
     public String toString() {

@@ -16,6 +16,28 @@ public class MyDate implements Comparable<MyDate> {
         this.year = year;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyDate myDate = (MyDate) o;
+
+        if (compareTo != myDate.compareTo) return false;
+        if (day != myDate.day) return false;
+        if (month != myDate.month) return false;
+        return year == myDate.year;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = compareTo;
+        result = 31 * result + day;
+        result = 31 * result + month;
+        result = 31 * result + year;
+        return result;
+    }
+
     public int getDay() {
         return day;
     }

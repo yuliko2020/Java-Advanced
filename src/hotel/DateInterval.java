@@ -22,6 +22,26 @@ public class DateInterval {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        DateInterval that = (DateInterval) o;
+
+        if (days != that.days) return false;
+        if (start != null ? !start.equals(that.start) : that.start != null) return false;
+        return finish != null ? finish.equals(that.finish) : that.finish == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = start != null ? start.hashCode() : 0;
+        result = 31 * result + (finish != null ? finish.hashCode() : 0);
+        result = 31 * result + days;
+        return result;
+    }
+
     public static boolean isIntersect(DateInterval interval1, DateInterval interval2) {
         return !((interval1.getStart().compareTo(interval2.getFinish()) > 0) ||
                 (interval2.getStart().compareTo(interval1.getFinish()) > 0));

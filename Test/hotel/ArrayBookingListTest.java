@@ -50,7 +50,7 @@ public class ArrayBookingListTest {
 
     @Test // test not working
     public void removeBooking() {
-        BookingList bookingList = new ArrayBookingList(4);
+        BookingList bookingList = new ArrayBookingList(3);
         Booking[] resArray = bookingList.removeBookingByIndex(b1);
         Booking[] shouldArray = {b2, b3};
         Assert.assertArrayEquals(resArray, shouldArray);
