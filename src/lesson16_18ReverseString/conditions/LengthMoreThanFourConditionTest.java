@@ -1,6 +1,8 @@
-package lesson16ReverseString;
+package lesson16_18ReverseString.conditions;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import lesson16_18ReverseString.Condition;
 import org.junit.jupiter.api.Test;
 
 /**

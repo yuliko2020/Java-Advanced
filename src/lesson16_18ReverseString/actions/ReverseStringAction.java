@@ -1,4 +1,6 @@
-package lesson16ReverseString;
+package lesson16_18ReverseString.actions;
+
+import lesson16_18ReverseString.Action;
 
 /**
  * JavaAdvanced

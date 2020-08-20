@@ -1,4 +1,4 @@
-package lesson16ReverseString;
+package lesson16_18ReverseString;
 
 /**
  * JavaAdvanced

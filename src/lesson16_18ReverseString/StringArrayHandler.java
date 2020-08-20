@@ -1,4 +1,4 @@
-package lesson16ReverseString;
+package lesson16_18ReverseString;
 
 import java.util.Arrays;
 
@@ -27,8 +27,11 @@ public class StringArrayHandler {
     }
 
     public void stringsHandler() { // void change to StringArrayHandler+return this;
+        if (this.strings == null || this.action == null) {
+            return;
+        }
         for (int i = 0; i < strings.length; i++) {
-            if (condition.test(strings[i])) {
+            if (condition == null || condition.test(strings[i])) {
                 strings[i] = action.doAction(strings[i]);
             }
 

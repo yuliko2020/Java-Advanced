@@ -1,4 +1,8 @@
-package lesson16ReverseString;
+package lesson16_18ReverseString;
+
+import lesson16_18ReverseString.conditions.LengthCondition;
+import lesson16_18ReverseString.actions.ReverseStringAction;
+import lesson16_18ReverseString.actions.ToUpperCaseAction;
 
 /**
  * JavaAdvanced
@@ -33,6 +37,20 @@ public class Main {
         stringArrayHandler3.stringsHandler();
         System.out.println(stringArrayHandler3.toString());
 
+        StringArrayHandler stringArrayHandler4 =
+                new StringArrayHandler(strings,
+                        new ReverseStringAction(),
+                        null);
+        stringArrayHandler4.stringsHandler();
+        System.out.println(stringArrayHandler4.toString());
 
+
+        ActionAndConditionExample actAndCond = new ActionAndConditionExample();
+        StringArrayHandler stringArrayHandler5 =
+                new StringArrayHandler(strings,
+                        actAndCond,
+                        actAndCond);
+        stringArrayHandler5.stringsHandler();
+        System.out.println(stringArrayHandler5.toString());
     }
 }

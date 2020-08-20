@@ -1,4 +1,6 @@
-package lesson16ReverseString;
+package lesson16_18ReverseString.conditions;
+
+import lesson16_18ReverseString.Condition;
 
 /**
  * JavaAdvanced
