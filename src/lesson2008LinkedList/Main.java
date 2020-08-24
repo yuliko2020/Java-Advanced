@@ -1,0 +1,39 @@
+package lesson2008LinkedList;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * JavaAdvanced
+ * 20/08/2020
+ */
+public class Main {
+    public static void main(String[] args) {
+        PersonLinkedList list = new PersonLinkedList();
+        list.add(new Person("Person 1"));
+        list.add(new Person("Person 2"));
+        list.add(new Person("Person 3"));
+        System.out.println(list);
+        list.remove();
+        list.remove();
+        list.remove();
+        System.out.println(list);
+        list.add(new Person("Person 4"));
+        System.out.println(list);
+
+
+        list.add(new Person("Person 1"));
+        list.add(new Person("Person 2"));
+        list.add(new Person("Person 6"));
+        list.add(new Person("Person 3"));
+
+        System.out.println(list);
+        Person p =new Person("Person 4");
+        System.out.println(list.find(p));
+        System.out.println("-----------------------");
+        list.removeByIndex(1);
+        System.out.println(list);
+
+
+    }
+}
