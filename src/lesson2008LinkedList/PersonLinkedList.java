@@ -24,6 +24,7 @@ public class PersonLinkedList {
 
     public void remove() {
         if (finish != null) {
+            finish.setPerson(null);
             if (finish == start) {
                 finish = null;
                 start = null;
@@ -37,7 +38,7 @@ public class PersonLinkedList {
         }
     }
 
-    public void removeByIndex(int index) {
+    public void remove(int index) {
         if (index > 0 && index < size) {
             if (index == size - 1) {
                 remove();
