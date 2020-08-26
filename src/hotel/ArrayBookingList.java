@@ -7,7 +7,7 @@ import java.util.Comparator;
  * JavaAdvanced
  * 04/08/2020
  */
-public abstract class ArrayBookingList implements BookingList  {
+public  class ArrayBookingList implements BookingList  {
     private Booking[] bookings;
     private int size = 0; // кол эл кот
     private int capacity = 3;

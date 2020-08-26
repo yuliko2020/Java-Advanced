@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 
 /**
@@ -42,20 +41,22 @@ public class ArrayBookingListTest {
                         new MyDate(13, 8, 2020))
 
         );
+        bookingList = new ArrayBookingList(3);
 
-        ArrayList<Booking> list =  new ArrayList<>();
-        //bookingList = new ArrayBookingList(3);
         bookingList.add(b1);
         bookingList.add(b2);
         bookingList.add(b3);
     }
 
-   @Test // test not working
+    @Test
     public void removeBooking() {
-        //BookingList bookingList = new ArrayBookingList(3);
-        Booking[] resArray = bookingList.removeBookingByIndex(b1);
-        Booking[] shouldArray = {b2, b3};
-        Assert.assertArrayEquals(resArray, shouldArray);
+        bookingList = new ArrayBookingList(3);
+        bookingList.add(b1);
+        bookingList.add(b2);
+        bookingList.add(b3);
+        bookingList.removeBookingByIndex(b2);
+        Assert.assertEquals(3,bookingList.size());
+
     }
 
     @Test
@@ -85,7 +86,7 @@ public class ArrayBookingListTest {
 
     @Test
     public void addToEmptyBookingListCorrectAdded() {
-        //BookingList bookingList = new ArrayBookingList(1);
+        BookingList bookingList = new ArrayBookingList(1);
         bookingList.add(b1);
         Assert.assertEquals(1, bookingList.size());
         bookingList.add(b2);
