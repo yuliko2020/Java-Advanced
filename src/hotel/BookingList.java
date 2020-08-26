@@ -13,13 +13,12 @@ public interface BookingList {
 
     void print();
 
-    //Booking getBookingByIndex(int index);
-    //Booking findBooking(Booking booking);
     Booking[] getSortedArray(Comparator<Booking> comparator);
 
     Booking getByIndex(int i);
 
-    int findIndexToRemoveBooking(Booking booking);
+    int findBookingByIndex(Booking booking);
+
 
     Booking[] removeBookingByIndex(Booking booking);
 }

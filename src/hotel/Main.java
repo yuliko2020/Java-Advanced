@@ -1,6 +1,7 @@
 package hotel;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * JavaAdvanced
@@ -8,8 +9,6 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-
-
         Booking b1 = new Booking(
                 new StandardRoom("1", 2),
                 new Person("Jack"),
@@ -42,6 +41,25 @@ public class Main {
 
         );
 
+        List<Booking> list = new ArrayList<>();
+        list.add(b1);
+        list.add(b2);
+        list.add(b3);
+        list.add(b4);
+        System.out.println(list);
+
+        System.out.println("-----remove--------");
+        list.remove(2);
+        System.out.println(list);
+
+
+
+        /*Booking[] bookings = list.toArray(new Booking[list.size()]);
+        list.toArray(bookings);
+        System.out.println();*/
+
+
+/*
         BookingList bookingList = new ArrayBookingList(2);
         bookingList.add(b4);
         bookingList.add(b2);
@@ -58,7 +76,7 @@ public class Main {
 
         bookingList.removeBookingByIndex(b2);
         bookingList.print();
-
+*/
     }
 
 
