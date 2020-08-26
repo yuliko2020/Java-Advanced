@@ -53,7 +53,7 @@ public class Main {
 
         Person person =new Person("Jack2");//or without
         System.out.println(people.indexOf(person));//without equals -1
-
+        System.out.println("----------------------");
 
 
     }
