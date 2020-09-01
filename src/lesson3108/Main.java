@@ -1,0 +1,54 @@
+package lesson3108;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * JavaAdvanced
+ * 31/08/2020
+ */
+public class Main {
+    public static void main(String[] args) {
+        Person p1 = null;
+        try {
+            p1 = new Person(null, "second1");
+        } catch (Exception e) {
+            System.out.println("person not create");
+        }
+        System.out.println(p1);
+
+       //Person p1 = new Person("first1", "second1");
+       /* p1.addAddress(new PersonAddress("adr1", "post"));
+        p1.addAddress(new PersonAddress("adr2", "billing"));
+        p1.addAddress(new PersonAddress("adr3", "email"));
+        p1.addAddress(new PersonAddress("adr4", "email"));
+
+        Person p2 = new Person("first2", "second2");
+        p2.addAddress(new PersonAddress("2adr1", "post"));
+        p2.addAddress(new PersonAddress("2adr2", "billing"));
+        p2.addAddress(new PersonAddress("2adr3", "email"));
+        p2.addAddress(new PersonAddress("2adr4", "email"));
+
+        Person p3 = new Person("first3", "second3");
+        p3.addAddress(new PersonAddress("3adr1", "post"));
+        p3.addAddress(new PersonAddress("3adr2", "billing"));
+        p3.addAddress(new PersonAddress("3adr3", "email"));
+        p3.addAddress(new PersonAddress("3adr4", "email"));
+
+
+        List<Person> people = new ArrayList<>();
+        people.add(p1);
+        people.add(p2);
+        people.add(p3);
+
+        System.out.println(PersonListHandler.personListHandler(people));*/
+
+
+        /*List<PersonAddress> tempList = p1.getAddresses("email");
+        System.out.println(tempList);
+
+        System.out.println(p1);*/
+    }
+
+
+}
