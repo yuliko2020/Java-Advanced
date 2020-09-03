@@ -1,9 +1,7 @@
-package lesson3108;
+package lesson3108_0209PersonAddress;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 /**
  * JavaAdvanced
@@ -15,7 +13,7 @@ public class PersonListHandler {
         List<String> list = new ArrayList<>();
         if ((people != null)) {
             for (Person person:people){
-                List <PersonAddress> tempAddressList =person.getAddresses("email");
+                List <PersonAddress> tempAddressList =person.getAddresses();
                 String nameString = person.getFirstName()+' '+ person.getSecondName();
                 for (PersonAddress adr :tempAddressList){
                     list.add(new String(adr.getAddress()+' '+ nameString));

@@ -1,8 +1,7 @@
-package lesson3108;
+package lesson3108_0209PersonAddress;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * JavaAdvanced
@@ -20,8 +19,15 @@ public class Person {
     }
 
     public Person(String firstName, String secondName) {
-            this.firstName = Objects.requireNonNull(firstName);
+           // this.firstName = Objects.requireNonNull(firstName);
+            //this.secondName = secondName;
+
+        if (firstName != null) {
+            this.firstName = firstName;
             this.secondName = secondName;
+        } else {
+            throw new IllegalArgumentException(); //если пришел null, объект не создается. Объект сам контролирует свою целостность
+        }
 
     }
 
@@ -47,10 +53,10 @@ public class Person {
         return res;
     }
 
-    public void addAddress(PersonAddress address) {
-        if (address != null) {
-            if (addresses == null) {
-                addresses = new ArrayList<>();
+    public void addAddress(PersonAddress address) {//добавление адресов, если пришел Person без списка адресов
+        if (address != null) {//проверка исходного параметра, что он не null
+            if (addresses == null) {//проверка, существует ли уже список PersonAddress, куда мы хотим записать адрес
+                addresses = new ArrayList<>(); //если нет - создаем его, 16 элементов по умолчанию
             }
             addresses.add(address);
         }
