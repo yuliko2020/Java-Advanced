@@ -1,4 +1,4 @@
-package lesson3108_0209PersonAddress;
+package lesson20200902PersonAddress;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,11 @@ public class Person {
         this.secondName = secondName;
         this.addresses = addresses;
     }
-
     public Person(String firstName, String secondName) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+    }
+    /*public Person(String firstName, String secondName) {
            // this.firstName = Objects.requireNonNull(firstName);
             //this.secondName = secondName;
 
@@ -29,7 +32,7 @@ public class Person {
             throw new IllegalArgumentException(); //если пришел null, объект не создается. Объект сам контролирует свою целостность
         }
 
-    }
+    }*/
 
     public String getFirstName() {
         return firstName;
@@ -39,7 +42,7 @@ public class Person {
         return secondName;
     }
 
-    public List<PersonAddress> getAddresses() {
+    public List<PersonAddress> getAddresses(AddressType addressType) {
         return new ArrayList<>(addresses);
     }
 

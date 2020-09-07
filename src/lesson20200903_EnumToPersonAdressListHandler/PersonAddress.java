@@ -1,8 +1,8 @@
-package lesson3108_0209PersonAddress;
+package lesson20200903_EnumToPersonAdressListHandler;
 
 /**
  * JavaAdvanced
- * 31/08/2020
+ * 07/09/2020
  */
 public class PersonAddress {
     private String address;
@@ -10,33 +10,25 @@ public class PersonAddress {
 
     public PersonAddress(String address, String type) {
         this.address = address;
-        try {
-            this.type = AddressType.valueOf(type);
-        } catch (Exception ex) {
-            System.out.println("STOP! The type is not correct");
-            throw ex;
-        }
+        this.type = AddressType.valueOf(type.toUpperCase());
     }
-
     public PersonAddress(String address, AddressType type) {
         this.address = address;
         this.type = type;
     }
-    public void send(){
-        type.send();
-    }
-
-
     public String getAddress() {
         return address;
     }
 
-    public  AddressType getType() {
+    public String getType() {
+        return type.name().toLowerCase();
+    }
+    public AddressType getTypeAsEnum() {
         return type;
     }
 
     @Override
     public String toString() {
-        return "Address : "+ address + " ("+  type +" )";
+        return "Address:"+ address + '(' + type +')';
     }
 }
