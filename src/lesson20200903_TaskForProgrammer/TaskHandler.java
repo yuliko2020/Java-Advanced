@@ -1,7 +1,6 @@
 package lesson20200903_TaskForProgrammer;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * JavaAdvanced
@@ -12,11 +11,20 @@ public class TaskHandler {
         List<TaskForProgrammer> result = new ArrayList<>();
         for (Programmer iProgrammer : programmers) {
             List<Task> tempTask = iProgrammer.getTaskList(Status.NOTACCEPTED);
-            for (Task iTask: tempTask){
-                result.add(new TaskForProgrammer(iTask,iProgrammer));
+            for (Task iTask : tempTask) {
+                result.add(new TaskForProgrammer(iTask, iProgrammer));
             }
         }
 
         return result;
     }
+
+    public static Queue<Task> taskQueue(List<Task> tasks) {
+        Queue<Task> result = new PriorityQueue<>(tasks);
+
+        return result;
+
+    }
+
+
 }

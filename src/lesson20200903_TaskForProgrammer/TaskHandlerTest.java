@@ -31,10 +31,14 @@ class TaskHandlerTest {
         programmers.add(p2);
         programmers.add(p3);
 
+
+
         TaskForProgrammer taskForProgrammer1 = new TaskForProgrammer(new Task(18,Status.NOTACCEPTED, "2"),p1);
         TaskForProgrammer taskForProgrammer2 = new TaskForProgrammer(new Task(21,Status.NOTACCEPTED, "5"),p2);
         TaskForProgrammer taskForProgrammer3 = new TaskForProgrammer(new Task(23,Status.NOTACCEPTED, "7"),p3);
         TaskForProgrammer taskForProgrammer4 = new TaskForProgrammer(new Task(24,Status.NOTACCEPTED, "8"),p3);
+
+
         List<TaskForProgrammer> expectedList = new ArrayList<>();
 
         expectedList.add(taskForProgrammer1);
@@ -42,13 +46,13 @@ class TaskHandlerTest {
         expectedList.add(taskForProgrammer3);
         expectedList.add(taskForProgrammer4);
 
-        assertEquals(expectedList,TaskHandler.taskHandler(programmers));
+       assertEquals(expectedList,TaskHandler.taskHandler(programmers));
 
 
 
+    }
 
-
-
+    private void assertEquals(List<TaskForProgrammer> list, List<TaskForProgrammer> expectedList) {
     }
 }
 
