@@ -66,8 +66,15 @@ public class Task implements Comparable <Task> {
         return result;
     }
 
-    @Override
-    public int compareTo(Task o) {
-        return 0;
+    public int getPrioritiesInNumbers() {
+       return priority.getPrioritiesInNumbers();
     }
+
+    @Override
+    public int compareTo(Task task) {
+        //return (getPrioritiesInNumbers(this.priority)-getPrioritiesInNumbers(task.priority));
+        return this.priority.compareTo(task.priority);
+    }
+
+
 }

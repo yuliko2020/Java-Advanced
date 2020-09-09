@@ -52,7 +52,7 @@ class TaskHandlerTest {
 
     }
 
-    private void assertEquals(List<TaskForProgrammer> list, List<TaskForProgrammer> expectedList) {
-    }
+    /*private void assertEquals(List<TaskForProgrammer> list, List<TaskForProgrammer> expectedList) {
+    }*/
 }
 
