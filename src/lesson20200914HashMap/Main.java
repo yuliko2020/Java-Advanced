@@ -53,12 +53,11 @@ public class Main {
 
     public static Map<Person, Boolean> getMapWithPersonKey(List<Person> list) {
         Map<Person, Boolean> result = new HashMap<>();
-        if (list == null) return result;
         for (Person person : list) {
             if (result.containsKey(person)) {
-                result.put(person, false);
-            } else {
                 result.put(person, true);
+            } else {
+                result.put(person, false);
             }
         }
         return result;
