@@ -15,20 +15,24 @@ public class Task2 {
         map.put("a", 1);
         map.put("b", 2);
         map.put("c", 4);
-        map.put("d", 7);
+        map.put("d", 15);
 
-        /*double c = 0;
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            String k = entry.getKey();
-            Integer v = entry.getValue();
-
-            System.out.println(k + "\t" + v);
-            c += Double.parseDouble(String.valueOf(v));
-        }
-        System.out.println("===");
-        System.out.println("Total: " + c);*/
-
-
+        System.out.println(getSumValuesOfaListElement(list, map));
     }
 
+    public static Map<String, Integer> getSumValuesOfaListElement(List<String> list, Map<String, Integer> map) {
+        String lastKey = "" ;
+        int lastValue = 0;
+        if (!map.isEmpty() && list != null) {
+            for (String str : list) {
+                if (map.containsKey(str)) {
+                    lastKey += str;
+                    lastValue += map.get(str);
+                }
+            }
+            map.put(lastKey, lastValue);
+        }
+        return map;
+    }
 }
+
