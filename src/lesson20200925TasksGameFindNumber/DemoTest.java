@@ -1,4 +1,4 @@
-package lesson20200925Tasks;
+package lesson20200925TasksGameFindNumber;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

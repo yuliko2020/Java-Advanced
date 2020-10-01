@@ -1,6 +1,4 @@
-package lesson20200925Tasks;
-
-import java.util.Scanner;
+package lesson20200925TasksGameFindNumber;
 
 /**
  * JavaAdvanced
