@@ -1,4 +1,4 @@
-package lesson20200925TasksGameFindNumber;
+package lesson20200925MockedGuessNumber;
 
 /**
  * JavaAdvanced
@@ -48,6 +48,7 @@ public class GuessNumber {
         number.game();*/
 
         NumberInput mockedInput = new InputMock();
+
         GuessNumber testGame = new GuessNumber(mockedInput);
         testGame.game();
 

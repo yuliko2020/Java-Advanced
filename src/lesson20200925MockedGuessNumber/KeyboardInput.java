@@ -1,4 +1,4 @@
-package lesson20200925TasksGameFindNumber;
+package lesson20200925MockedGuessNumber;
 
 import java.util.Scanner;
 
