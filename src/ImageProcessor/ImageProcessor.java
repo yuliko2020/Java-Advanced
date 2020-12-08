@@ -5,14 +5,17 @@ import ImageProcessor.entity.ImageDescriptor;
 import ImageProcessor.service.DownloadService;
 import ImageProcessor.service.FileService;
 
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ImageProcessor {
+
     private FileService fileService;
     private DownloadService downloadService;
 
     public static void main(String[] args) {
+
         String csvFile = args[0];
 
         FileService fs = new FileService();
@@ -32,17 +35,21 @@ public class ImageProcessor {
 
         List<ImageDescriptor> imageDescriptors = fileService.readImageDescriptors(fileName);
 
-        List<String> imageUrls = imageDescriptors.stream().map(d -> d.getImageURL()).collect(Collectors.toList());
+        List<DownloadedImage> downloadedImages = downloadService.downloadImages(imageDescriptors);
 
-        List<DownloadedImage> downloadedImages = downloadService.downloadImages(imageUrls);
+        List<DownloadedImage> successfullyDownloadedimages = downloadedImages
+                .stream()
+                .filter(DownloadedImage::isSuccessful)
+                .collect(Collectors.toList());
 
 
 
-        /*try {
-          DownloadService ds = new Downloadservice();
-          List<DownloadedImage> downloadedImages = ds.downloadImages(images);
-        }*/
+        //try {
+        //  DownloadService ds = new Downloadservice();
+        //  List<DownloadedImage> downloadedImages = ds.downloadImages(images);
+        //}
 
 
     }
+
 }
